@@ -1,6 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 .App {
   text-align: center;
-  margin: 2em auto;
-  font-size: 20px;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+h1{
+  color: rgb(230, 68, 19);
+}
+.input-box{
+  margin: 10px;
+  width: 20em;
+  height: 2.5em;
+  border-radius: 7px;
+  border: 2px solid rgb(230, 68, 19);
+}
+input:focus{
+  outline: none !important;
+}
+.btn-check{
+  margin: 15px;
+  background-color: rgb(230, 68, 19);
+  padding: 10px 16px;
+  border-radius: 10px;
+  border:none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.exchange-table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table,tr,td{
+  border: 1px solid rgb(230, 68, 19);;
+  border-collapse: collapse;
+  padding: 22px;
 }
