@@ -31,42 +31,14 @@ function App() {
     let tempNotes = notes;
     console.log(exchangeAmount);
 
-    if ((tempExchangeAmount >= 2000) && Math.floor(tempExchangeAmount/2000)>0) {
-      tempNotes["2000"] = Math.floor(tempExchangeAmount/2000);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/2000)*2000;
-    } 
-
-    if ((tempExchangeAmount >= 500) && Math.floor(tempExchangeAmount)/500){
-      tempNotes["500"] = Math.floor(tempExchangeAmount/500);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/500)*500;
-    }
-
-    if ((tempExchangeAmount >= 100) && Math.floor(tempExchangeAmount)/100){
-      tempNotes["100"] = Math.floor(tempExchangeAmount/100);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/100)*100;
-    }
-
-    if ((tempExchangeAmount >= 20) && Math.floor(tempExchangeAmount)/20){
-      tempNotes["20"] = Math.floor(tempExchangeAmount/20);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/20)*20;
-    }
-
-    if ((tempExchangeAmount >= 10) && Math.floor(tempExchangeAmount)/10){
-      tempNotes["10"] = Math.floor(tempExchangeAmount/10);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/10)*10;
-    }
-
-    if ((tempExchangeAmount >= 5) && Math.floor(tempExchangeAmount)/5){
-      tempNotes["5"] = Math.floor(tempExchangeAmount/5);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/5)*5;
-    }
-
-    if ((tempExchangeAmount >= 1) && Math.floor(tempExchangeAmount)/1){
-      tempNotes["1"] = Math.floor(tempExchangeAmount/1);
-      tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/1)*1;
-    }
-
-    setNotes(tempNotes => tempNotes);
+    Object.keys(notes).reverse().forEach(note => {
+      let noteNumber = Number(note);
+      if ((tempExchangeAmount >= noteNumber) && Math.floor(tempExchangeAmount/noteNumber)>0) {
+        tempNotes[noteNumber] = Math.floor(tempExchangeAmount/noteNumber);
+        tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/noteNumber)*noteNumber;
+      } 
+    })
+    setNotes(tempNotes);
   }
 
   const resetHandler = () => {
