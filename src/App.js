@@ -66,8 +66,6 @@ function App() {
       tempNotes["1"] = Math.floor(tempExchangeAmount/1);
       tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/1)*1;
     }
-    console.log(tempExchangeAmount);
-    console.log(tempNotes);
 
     setNotes(tempNotes => tempNotes);
   }
