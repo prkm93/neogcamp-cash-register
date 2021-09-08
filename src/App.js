@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 function App() {
@@ -115,7 +115,6 @@ function App() {
           <button className="btn-check" onClick={exchangeHandler}>Check</button>
           <button className="btn-check" onClick={resetHandler}>Clear</button>
         </div>
-        <h3></h3>
         <h3>Exchange Amount: {exchangeAmount}</h3>
         <h2>Return Exchange</h2>
         <div className="exchange-table">
