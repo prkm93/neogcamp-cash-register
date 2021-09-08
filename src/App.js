@@ -33,7 +33,6 @@ function App() {
 
     if ((tempExchangeAmount >= 2000) && Math.floor(tempExchangeAmount/2000)>0) {
       tempNotes["2000"] = Math.floor(tempExchangeAmount/2000);
-      console.log(tempExchangeAmount);
       tempExchangeAmount = tempExchangeAmount - Math.floor(tempExchangeAmount/2000)*2000;
     } 
 
