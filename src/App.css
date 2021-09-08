@@ -2,7 +2,7 @@
 .App {
   text-align: center;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 500;
   font-family: 'Nunito', sans-serif;
 }
 h1{
@@ -36,4 +36,9 @@ table,tr,td{
   border: 1px solid rgb(230, 68, 19);;
   border-collapse: collapse;
   padding: 22px;
+  font-weight: 500;
+}
+th{
+  padding: 22px;
+  font-weight: bolder;
 }
